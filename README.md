@@ -6,6 +6,9 @@ Using this project, you can connect a LangGraph agent to MCP servers and use pre
 
 This integration enables automatic tool discovery and multi-server support, making AI systems more modular and powerful. It allows AI systems to automatically find tools and connect to multiple servers, increasing their flexibility and efficiency.
 
+![image](https://github.com/user-attachments/assets/3540530a-7eed-4a47-87cf-00ee46fa5024)
+
+
 ## What is MCP and Why It Matters?
 
 The Model Context Protocol (MCP) is an open standard that provides a structured way for AI applications to interact with external data, tools, and APIs. MCP was developed by Anthropic to address the challenge of dynamically connecting LLMs to external data sources without requiring custom integrations for each tool.
