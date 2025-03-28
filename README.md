@@ -17,7 +17,7 @@ MCP is important because it helps AI systems share and access data easily, remov
 
 ## Project Structure
 
-```python
+```bash
 langgraph_mcp/
 │-- agent.py  
 │-- servers/
