@@ -31,7 +31,7 @@ async def run_agent():
             }, 
             "math": {
                 "command": "python",
-                "args": ["servers/math_server.py"],
+                "args": ["servers/math.py"],
                 "transport": "stdio",
             },       
             # "weather": {
