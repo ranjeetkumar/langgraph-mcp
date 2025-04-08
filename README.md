@@ -51,4 +51,4 @@ OPENAI_API_KEY=<your-openai-api-key>
 ## How It Works
 To start, run ```servers/server.py``` in your terminal. This will start the MCP server. Then, in a new terminal, run ```agent.py```. The agent will connect to the server via the MCP client and execute your query, as shown in the demo.
 
-![demo](https://github.com/user-attachments/assets/10e9c854-b6c9-4f96-b9dd-772429105456)
+https://github.com/user-attachments/assets/c65255a1-62af-4711-8f10-ebfdacd9b3c6
