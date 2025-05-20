@@ -17,31 +17,33 @@ model = ChatOpenAI(model="gpt-4o")
 
 # Define MCP servers
 async def run_agent():
-    async with MultiServerMCPClient(
-        {
-            "tavily": {
-                "command": "python",
-                "args": ["servers/tavily.py"],
-                "transport": "stdio",
-            },
-            "youtube_transcript": {
-                "command": "python",
-                "args": ["servers/yt_transcript.py"],
-                "transport": "stdio",
-            }, 
-            "math": {
-                "command": "python",
-                "args": ["servers/math.py"],
-                "transport": "stdio",
-            },       
-            # "weather": {
-            # "url": "http://localhost:8000/sse", # start your weather server on port 8000
-            # "transport": "sse",
-            # }
-        }
-    ) as client:
-        # Load available tools
-        tools = client.get_tools()
+        client = MultiServerMCPClient(
+            {
+                "tavily": {
+                    "command": "python",
+                    "args": ["servers/tavily.py"],
+                    "transport": "stdio",
+                },
+            
+                "youtube_transcript": {
+                    "command": "python",
+                    "args": ["servers/yt_transcript.py"],
+                    "transport": "stdio",
+                }, 
+                "math": {
+                    "command": "python",
+                    "args": ["servers/math1.py"],
+                    "transport": "stdio",
+                },   
+                
+                # "weather": {
+                # "url": "http://localhost:8000/sse", # start your weather server on port 8000
+                # "transport": "sse",
+                # }
+            }
+        ) 
+            # Load available tools
+        tools = await client.get_tools()
         agent = create_react_agent(model, tools)
 
         # Add system message
